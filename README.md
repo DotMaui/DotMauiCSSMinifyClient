@@ -64,11 +64,10 @@ JSONObject obj = new JSONObject(responseCdn);
 String fileUrl = obj.getString("url");
 System.out.println(fileUrl);
 
-client = new DotMauiCSSMinifyClient(apiKey);
-
 /**
  * Example 3: Minify css from url with wrap lines.
  */
+client = new DotMauiCSSMinifyClient(apiKey);
 client.setWrapCSSLines(true);
 String minified_from_url = client.minifyCSSFromUrl("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css");
 System.out.println(minified_from_url);
